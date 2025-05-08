@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/output.css') }}">
+</head>
+<body>
+    
+    <div class="output">
+        <h3 style="color: #fff;">{{disease}}</h3>
+        <table style="color: #fff;">
+            <h1 style="color: #fff;">
+                {% for table in tables %}
+                <h2 style="color: #fff;">{{titles[loop.index]}}</h2>                            
+                {{ table|safe }}
+                {% endfor %}     
+            </h1> 
+        </table>
+        <h1 style="color: #fff;">Rating Map</h1>
+            <div class="map">
+                <embed type="text/html" src="{{ url_for('static', filename='map/map.html') }}" width = "600px" height="400px">
+            </div>
+    </div>
+
+</body>
+</html>

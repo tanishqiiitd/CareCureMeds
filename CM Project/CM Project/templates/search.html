@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/search.css') }}">
+</head>
+<body>
+<header>
+    <a class="logo">CareCureMeds</a>
+    <ul>
+        <li><a href="{{url_for('Home')}}" class="active1">Home</a></li>
+        <li><a href="{{url_for('HeatMap')}}" class="active2">Hospital Rating HeatMap</a></li>
+        <li><a href="{{url_for('search')}}" class="active4">Search for Hospitals</a></li>
+    </ul>
+</header>
+    <div class="Form">
+        <form method="POST">
+            <label for="address" id = "address">Address</label>
+            <input type="text" id="adr" name="address" required>
+            <label for="radius" id = "radius">Radius(in km)</label>
+            <input type="text" id = "rad" name ="radius" required>
+            <label for="symptoms" id = "symptoms">Select Symptoms</label>
+            <select multiple name="symptoms" required>
+                <option value="itching">Itching</option>
+                <option value="chills">Chills</option>
+                <option value="joint_pain">Joint pain</option>
+                <option value="vomiting">Vomiting</option>
+                <option value="spotting_ urination">Spotting urination</option>
+                <option value="fatigue">Fatigue</option>
+                <option value="weight_loss">Weight loss</option>
+                <option value="lethargy">Lethargy</option>
+                <option value="high_fever">High fever</option>
+                <option value="breathlessness">Breathlessness</option>
+                <option value="sweating">Sweating</option>
+                <option value="headache">Headache</option>
+                <option value="dark_urine">Dark urine</option>
+                <option value="nausea">Nausea</option>
+                <option value="loss_of_appetite">Loss of appetite</option>
+                <option value="diarrhoea">Diarrhoea</option>
+                <option value="mild_fever">Mild fever</option>
+                <option value="yellowing_of_eyes">Yellowing of eye</option>
+                <option value="acute_liver_failure">Acute liver failure</option>
+                <option value="malaise">Malaise</option>
+                <option value="chest_pain">Chest pain</option>
+                <option value="neck_pain">Neck pain</option>
+                <option value="muscle_weakness">Muscle weakness</option>
+                <option value="loss_of_balance">Loss of balance</option>
+                <option value="unsteadiness">Unsteadiness</option>
+                <option value="muscle_pain">Muscle pain</option>
+                <option value="altered_sensorium">Altered sensorium</option>
+                <option value="red_spots_over_body">Red spots over body</option>
+                <option value="family_history">Family history</option>
+                <option value="lack_of_concentration">Lack of concentration</option>
+              </select>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
