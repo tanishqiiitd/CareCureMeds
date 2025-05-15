@@ -40,7 +40,7 @@ Currently, the platform supports hospital data across the **United States**, sou
 ## 🧠 Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript  
-- **Backend:** Python (Flask or Django)  
+- **Backend:** Python  
 - **ML Model:** Scikit-learn Random Forest Classifier  
 - **Mapping:** Geopy, Google Maps API  
 - **Pathfinding:** Modified Weighted Shortest Path Algorithm  
